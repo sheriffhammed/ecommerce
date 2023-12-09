@@ -18,7 +18,6 @@ const handleUserRegisteration = async (req, res) => {
             zip: req.body.zip,
             country: req.body.country,
             phone: req.body.phone,
-            isAdmin: req.body.isAdmin,
             roleId : req.body.roleId
         }
         //User Validations
@@ -34,9 +33,7 @@ const handleUserRegisteration = async (req, res) => {
             city: { type: "string" },
             zip: { type: "string" },
             country: { type: "string" },
-            //phone: {type: "number", integer: true, positive: true},
             phone: { type: "string" },
-            isAdmin: { type: "boolean" },
             roleId: {type: "number", integer: true, positive: true},
         };
 

@@ -12,13 +12,13 @@ router.route('/:id')
     .delete(checkRole(["Admin"]),productsController.deleteProduct)
     .put(checkRole(["Admin"]),productsController.updateProduct)
 
-router.route('/count/product')
+router.route('/count/productbycategory')
     .get(checkRole(["Admin"]),productsController.countProducts)
 
-router.route('/featured/product')
+router.route('/get/featured')
     .get(checkRole(["Admin","User"]),productsController.featuredProducts)
 
-router.route('/search/product')
+router.route('/search/name')
     .get(checkRole(["Admin","User"]),productsController.searchProducts)
     
 

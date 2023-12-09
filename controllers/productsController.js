@@ -23,7 +23,7 @@ const selectAllProducts = async(req, res) =>{
             }] })
         if(res.status(200) && products){
             res.status(200).json({data: products}, null, 2)
-            console.log(JSON.stringify(products, null, 2));
+           // console.log(JSON.stringify(products, null, 2));
         }else{
             res.status(400).json({message: "No Record Found, Please try again"})
         }
@@ -144,7 +144,7 @@ const updateProduct = async(req, res) =>{
 
 //Add Product
 const addProduct = async(req, res) => {
-    console.log("Request params ", req.body)
+    //console.log("Request params ", req.body)
     try {
         const data = {
             name: req.body.name,
